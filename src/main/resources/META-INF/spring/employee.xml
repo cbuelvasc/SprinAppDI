@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="managementAssistant" class="com.cafekotlin.dependencyinjection.employees.ManagementAssistant">
+        <constructor-arg ref="attendEvents"/>
+    </bean>
+
+    <bean id="attendEvents" class="com.cafekotlin.dependencyinjection.tasks.AttendEvents"/>
+
+    <!--<bean id="secretary" class="com.cafekotlin.dependencyinjection.employees.Secretary">
+        <constructor-arg ref="attendEvents"/>
+    </bean>
+
+    <bean id="scheduleMeetings" class="com.cafekotlin.dependencyinjection.tasks.ScheduleMeetings"/>-->
+
+</beans>
